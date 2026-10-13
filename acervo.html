@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Acervo de publicações do Colégio Ação no Instagram, de 2025 a 2026.">
+    <title>Acervo | Colégio Ação</title>
+    <link rel="icon" href="assets/logo.jpg"><meta name="theme-color" content="#0b0a24">
+      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="acervo.css">
+    <link rel="stylesheet" href="impacto.css">
+  </head>
+  <body class="archive-page">
+    <a class="archive-skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="archive-header">
+      <div class="archive-shell archive-header-inner">
+        <a class="archive-brand" href="index.html" aria-label="Colégio Ação — página inicial">
+          <img src="assets/logo-192.webp" alt="Logo do Colégio Ação">
+          <span class="archive-brand-name">Colégio Ação<small>& Mundinho Ação</small></span>
+        </a>
+
+        <nav class="archive-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a class="archive-nav-current" href="acervo.html" aria-current="page">Acervo</a>
+          <a class="archive-nav-contact" href="index.html#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="archive-hero" aria-labelledby="archive-title">
+        <div class="archive-shell archive-hero-inner">
+          <div class="archive-hero-copy">
+            <p class="archive-eyebrow"><span aria-hidden="true"></span> Acervo da escola</p>
+            <h1 id="archive-title">Pequenos momentos.<em>Grandes histórias.</em></h1>
+            <p class="archive-hero-lede">Projetos, descobertas e encontros que fazem parte da nossa história.</p>
+            <div class="archive-hero-meta" aria-label="Período do acervo">
+              <span>2025 — 2026</span>
+              <i aria-hidden="true"></i>
+              <span id="hero-total">Carregando publicações</span>
+            </div>
+          </div>
+
+          <div class="archive-hero-card" aria-hidden="true">
+            <div class="archive-hero-card-top">
+              <img class="archive-instagram-icon" src="assets/icons/instagram.svg" alt="" width="18" height="18">
+              <span>@colegio_acao</span>
+            </div>
+            <div class="archive-hero-media">
+              <img src="assets/posts/DYkWDivpsXH-1.webp" alt="" width="960" height="1200">
+              <span class="archive-hero-media-label">REGISTRO · 2025—26</span>
+            </div>
+            <span class="archive-hero-card-caption">Momentos da nossa comunidade</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="archive-shell archive-content" aria-labelledby="explore-title">
+        <div class="archive-section-heading">
+          <div>
+            <p class="archive-eyebrow">Explore o acervo</p>
+            <h2 id="explore-title">Descubra a vida <span>na Ação.</span></h2>
+          </div>
+          <p class="archive-section-note">Pesquise por palavras, temas ou ano.</p>
+        </div>
+
+        <div class="archive-filters" aria-label="Filtros do acervo">
+          <div class="archive-search-field">
+            <label for="post-search">Buscar no acervo</label>
+            <div class="archive-input-wrap">
+              <span class="archive-search-icon" aria-hidden="true"></span>
+              <input id="post-search" type="search" autocomplete="off" placeholder="Ex.: projeto, aula, encontro" spellcheck="false">
+            </div>
+          </div>
+
+          <fieldset class="archive-year-filter">
+            <legend>Filtrar por ano</legend>
+            <div class="archive-year-options" id="year-filters">
+              <button type="button" class="archive-year-button is-active" data-year="all" aria-pressed="true">Todos</button>
+              <button type="button" class="archive-year-button" data-year="2025" aria-pressed="false">2025</button>
+              <button type="button" class="archive-year-button" data-year="2026" aria-pressed="false">2026</button>
+            </div>
+          </fieldset>
+
+          <div class="archive-theme-filter">
+            <label for="theme-filter">Temas</label>
+            <select id="theme-filter">
+              <option value="">Todos os temas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="archive-results-bar">
+          <p id="result-count" role="status" aria-live="polite">Carregando publicações</p>
+          <button id="clear-filters" class="archive-clear-button" type="button" hidden>Limpar filtros</button>
+        </div>
+
+        <div id="posts-grid" class="archive-posts-grid" aria-live="polite" aria-busy="true"></div>
+
+        <div id="empty-state" class="archive-empty-state" hidden>
+          <span class="archive-empty-mark" aria-hidden="true">⌕</span>
+          <h3>Nenhuma publicação encontrada</h3>
+          <p>Tente buscar por outro termo ou remova os filtros para continuar explorando.</p>
+          <button id="empty-clear" class="archive-secondary-button" type="button">Limpar filtros</button>
+        </div>
+
+        <div class="archive-load-more-wrap">
+          <button id="load-more" class="archive-load-more" type="button" hidden>Carregar mais <span>24</span></button>
+          <p id="load-status" class="archive-load-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="archive-footer">
+      <div class="archive-shell archive-footer-inner">
+        <a class="archive-footer-brand" href="index.html" aria-label="Voltar para a página inicial do Colégio Ação">
+          <img src="assets/logo-192.webp" alt="Logo do Colégio Ação">
+          <span>Colégio Ação</span>
+        </a>
+        <a href="https://www.instagram.com/colegio_acao/" target="_blank" rel="noopener noreferrer"><img class="archive-instagram-icon" src="assets/icons/instagram.svg" alt="" width="20" height="20"> Instagram @colegio_acao <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+
+    <dialog id="post-dialog" class="archive-dialog" aria-labelledby="dialog-title">
+      <div class="archive-dialog-shell">
+        <div class="archive-dialog-header">
+          <p id="dialog-kicker" class="archive-dialog-kicker">Publicação</p>
+          <button id="dialog-close" class="archive-dialog-close" type="button" aria-label="Fechar publicação">×</button>
+        </div>
+
+        <div class="archive-dialog-layout">
+          <div class="archive-dialog-gallery">
+            <div id="dialog-image-frame" class="archive-dialog-image-frame">
+              <img id="dialog-image" alt="" hidden>
+              <p id="dialog-no-image" class="archive-dialog-no-image" hidden>Imagem não disponível para esta publicação.</p>
+              <span id="dialog-media-type" class="archive-dialog-media-type" hidden></span>
+            </div>
+            <div id="dialog-controls" class="archive-dialog-controls" hidden>
+              <button id="dialog-prev" type="button" aria-label="Imagem anterior"><span>Anterior</span></button>
+              <span id="dialog-position" aria-live="polite">1 / 1</span>
+              <button id="dialog-next" type="button" aria-label="Próxima imagem"><span>Próxima</span></button>
+            </div>
+          </div>
+
+          <div class="archive-dialog-copy">
+            <p id="dialog-date" class="archive-dialog-date"></p>
+            <h2 id="dialog-title"></h2>
+            <div id="dialog-tags" class="archive-dialog-tags" aria-label="Temas da publicação"></div>
+            <p id="dialog-summary" class="archive-dialog-summary"></p>
+            <a id="dialog-source" class="archive-dialog-source" href="" target="_blank" rel="noopener noreferrer" hidden>Ver publicação no Instagram <span aria-hidden="true">+</span></a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <noscript>Ative o JavaScript para navegar pelo acervo de publicações.</noscript>
+    <script src="dados-publicacoes.js"></script>
+    <script src="acervo.js" defer></script>
+    <script src="impacto.js" defer></script>
+  </body>
+</html>

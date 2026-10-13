@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("assets/fonts/space-grotesk.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("assets/fonts/manrope.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --night: #080d20;
+  --night-soft: #0d1530;
+  --surface: #111c39;
+  --surface-raised: #172449;
+  --surface-blue: #1c3374;
+  --ink: #f4f7ff;
+  --muted: #a8b5d4;
+  --line: #ffffff1b;
+  --blue: #496dff;
+  --cyan: #53e5f2;
+  --orange: #ffad47;
+  --lime: #b8ef75;
+  --radius: 22px;
+  --ease: cubic-bezier(.2, .75, .25, 1);
+  --wrap: 1240px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 104px; background: var(--night); }
+body { margin: 0; background: var(--night); color: var(--ink); font: 400 1rem/1.7 Manrope, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body, button, input, select { font-family: Manrope, Arial, sans-serif; }
+h1, h2, h3, h4, p, figure { margin: 0; }
+h1, h2, h3, h4 { font-family: "Space Grotesk", Manrope, sans-serif; line-height: 1.12; letter-spacing: -.045em; }
+p { color: var(--muted); }
+a { color: inherit; text-decoration: none; }
+button, input, select { color: inherit; font: inherit; }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; object-fit: cover; }
+a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+[hidden] { display: none !important; }
+::selection { color: var(--night); background: var(--cyan); }
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
+.wrap { width: min(var(--wrap), calc(100% - 80px)); margin-inline: auto; }
+.section { padding-block: 112px; }
+.section-number, .card-kicker { color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .15em; line-height: 1.5; text-transform: uppercase; }
+.section-number { margin-bottom: 22px; }
+.section-number.light { color: #c6d2ff; }
+.button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 11px; padding: 13px 22px; border: 1px solid transparent; border-radius: 999px; background: var(--blue); color: #fff; font-size: .82rem; font-weight: 800; line-height: 1.3; box-shadow: 0 8px 30px #3558ff45; transition: transform .25s var(--ease), background .25s, box-shadow .25s; }
+.button:hover { transform: translateY(-3px); background: #6481ff; box-shadow: 0 13px 34px #3558ff66; }
+.button.orange { background: var(--orange); color: #10152a; box-shadow: 0 8px 28px #ffad4740; }
+.button.orange:hover { background: #ffc36f; box-shadow: 0 13px 34px #ffad475c; }
+.button.outline { border-color: #ffffff4a; background: #ffffff08; color: var(--ink); box-shadow: none; }
+.button.outline:hover { border-color: var(--cyan); background: #53e5f218; color: var(--cyan); }
+.button.small { min-height: 42px; padding: 10px 17px; font-size: .74rem; }
+.text-link { display: inline-flex; align-items: center; gap: 13px; color: var(--ink); font-size: .82rem; font-weight: 750; transition: color .2s; }
+.text-link:hover { color: var(--cyan); }
+.link-circle { display: grid; width: 31px; height: 31px; flex: 0 0 31px; place-items: center; border: 1px solid #ffffff44; border-radius: 50%; color: var(--cyan); font-size: 0; transition: transform .25s, background .25s, color .25s; }
+.link-circle::after { content: "↗"; font-size: 1rem; }
+.text-link:hover .link-circle { transform: rotate(45deg); border-color: var(--cyan); background: var(--cyan); color: var(--night); }
+.source-link { color: var(--cyan); font-size: .8rem; font-weight: 750; text-decoration: underline; text-decoration-color: #53e5f255; text-underline-offset: 5px; }
+.source-link:hover { color: var(--orange); }
+.skip-link { position: fixed; z-index: 1000; top: -100px; left: 16px; padding: 12px 17px; border-radius: 10px; background: var(--cyan); color: var(--night); font-weight: 800; }
+.skip-link:focus { top: 12px; }
+
+@media (max-width: 760px) {
+  html { scroll-padding-top: 88px; }
+  .wrap { width: calc(100% - 40px); }
+  .section { padding-block: 70px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
